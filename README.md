@@ -5,8 +5,9 @@ A lightweight Node.js/Express storefront that lets you create products and gener
 This application uses the PayPal TypeScript SDK generated via [APIMatic's Code Generation Platform](<https://apimatic-poc-pp.pages.dev/>).
 
 ## Demo
+![paypalsampleapp](https://github.com/user-attachments/assets/dc3e5b02-934e-44b5-9df9-20387557babe)
 
- [Watch Video Demo](https://drive.google.com/file/d/1K8fwUAo2J1Mq6lwchpf3q9cULy-DEIpw/view?usp=sharing)
+ 
 
 
 ## Features
