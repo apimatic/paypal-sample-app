@@ -1,7 +1,15 @@
 import express, { Request, Response } from 'express';
+import fs from 'fs';
 import multer from 'multer';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+
+// ── Ensure uploads directory exists ─────────────────────────────────────────
+
+const uploadsDir = path.join(__dirname, '..', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
 import {
   ApiError,
   CheckoutPaymentIntent,
@@ -55,11 +63,11 @@ const payments: Payment[] = [];
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
+app.use('/uploads', express.static(uploadsDir));
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
-    cb(null, path.join(__dirname, '..', 'uploads'));
+    cb(null, uploadsDir);
   },
   filename: (_req, file, cb) => {
     const ext = path.extname(file.originalname);
