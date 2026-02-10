@@ -31,7 +31,7 @@ This application uses the PayPal TypeScript SDK generated via [APIMatic's Code G
 
 ```bash
 # Clone the repository
-git clone https://github.com/apimatic/paypal-instant-storefront.git
+git clone https://github.com/apimatic/paypal-sample-app.git
 cd paypal-instant-storefront
 
 # Install dependencies
