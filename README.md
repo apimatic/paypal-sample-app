@@ -64,7 +64,7 @@ Open [http://localhost:3000](http://localhost:3000) and enter your PayPal Sandbo
 
 The app is a single Express/TypeScript server that renders all pages as server-side HTML. When you configure your Sandbox credentials, the server validates them by making a test order call to the PayPal API. Once validated, you can create products that are stored in memory, each assigned a unique checkout URL.
 
-When a buyer visits a checkout link, the page loads the PayPal JS SDK and renders Smart Payment Buttons. Clicking "Pay" triggers a server-side `POST /api/orders` call that uses the `paypal-apimatic-sdk` to create an order with full item details and amount breakdowns. After the buyer approves, a `POST /api/orders/:orderId/capture` call captures the payment, extracts payer info and capture IDs from the response, and stores the payment record.
+When a buyer visits a checkout link, the page loads the PayPal SDK and renders Smart Payment Buttons. Clicking "Pay" triggers a server-side `POST /api/orders` call that uses the `paypal-apimatic-sdk` to create an order with full item details and amount breakdowns. After the buyer approves, a `POST /api/orders/:orderId/capture` call captures the payment, extracts payer info and capture IDs from the response, and stores the payment record.
 
 All state (credentials, products, payments) lives in memory, so it resets on server restart. Product images are saved to the `uploads/` directory via Multer. The entire app runs in Sandbox mode — no real money is ever charged.
 
