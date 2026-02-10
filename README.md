@@ -6,7 +6,7 @@ This application uses the PayPal TypeScript SDK generated via [APIMatic's Code G
 
 ## Demo
 
-| [Watch Video Demo](https://drive.google.com/file/d/1K8fwUAo2J1Mq6lwchpf3q9cULy-DEIpw/view?usp=sharing)
+ [Watch Video Demo](https://drive.google.com/file/d/1K8fwUAo2J1Mq6lwchpf3q9cULy-DEIpw/view?usp=sharing)
 
 
 ## Features
